@@ -3,3 +3,15 @@
 		<ion-title>Schedule</ion-title>
 	</ion-toolbar>
 </ion-header>
+
+<ion-content>
+	<ul class="schedule">
+		<li>
+			<schedule-item
+				*ngFor="let item of (schedule$ | async)"
+				[item]="item"
+				(detail)="showDetail($event)">
+			</schedule-item>
+		</li>
+	</ul>
+</ion-content>

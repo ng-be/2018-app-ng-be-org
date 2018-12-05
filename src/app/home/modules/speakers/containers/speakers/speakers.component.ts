@@ -20,7 +20,6 @@ export class SpeakersComponent {
 	constructor(
 		private readonly speakersService: SpeakersService,
 		private readonly browserService: BrowserService,
-
 		private readonly navController: NavController
 	) {}
 

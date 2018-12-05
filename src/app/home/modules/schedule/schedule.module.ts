@@ -5,6 +5,10 @@ import {IonicModule} from '@ionic/angular';
 
 // Containers
 import {ScheduleComponent} from './containers/schedule/schedule.component';
+import {ScheduleDetailComponent} from './containers/schedule-detail/schedule-detail.component';
+
+// Components
+import {ScheduleItemComponent} from './components/schedule-item/schedule-item.component';
 
 import {routes} from './schedule.routing';
 
@@ -15,7 +19,9 @@ import {routes} from './schedule.routing';
 		RouterModule.forChild(routes)
 	],
 	declarations: [
-		ScheduleComponent
+		ScheduleComponent,
+		ScheduleDetailComponent,
+		ScheduleItemComponent
 	]
 })
 export class ScheduleModule {}

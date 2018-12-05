@@ -4,7 +4,10 @@ export interface Speaker {
 	firstName: string;
 	description: string;
 	picture: string;
-	talk: string;
+	talk: {
+		id: string;
+		title: string;
+	};
 	contact: {
 		github?: string;
 		twitter?: string;
