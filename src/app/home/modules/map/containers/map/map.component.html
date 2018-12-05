@@ -1,0 +1,19 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-title>Map</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content class="google-map">
+	<google-map
+		*ngIf="googleMapReady$ | async"
+		(idle)="onMapIdle()"
+		[markers]="markers">
+	</google-map>
+
+	<div
+		class="google-map__static"
+		*ngIf="!(googleMapReady$ | async) || showStatic"
+		(click)="openGoogleMaps()">
+	</div>
+</ion-content>

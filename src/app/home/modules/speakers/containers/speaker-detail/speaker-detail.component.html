@@ -1,0 +1,16 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button defaultHref="home/(speakers:speakers)"></ion-back-button>
+		</ion-buttons>
+
+		<ion-title>{{ title$ | async }}</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<speaker-info
+		[speaker]="speaker$ | async"
+		(url)="openUrl($event)">
+	</speaker-info>
+</ion-content>

@@ -1,0 +1,60 @@
+{
+	"speakers": [
+		{
+			"contact": {
+				"github": "PascalPrecht",
+				"twitter": "PascalPrecht",
+				"website": {
+					"title": "Thoughtram",
+					"url": "http://thoughtram.io/"
+				}
+			},
+			"description": "<p>Pascal is a Founder of thoughtram and Software Engineer at MachineLabs. He's strongly involved with the community as a Google Developer Expert for the Angular team. Pascal likes to make electronic music and considers himself a bedroom producer.</p>",
+			"firstName": "Pascal",
+			"name": "Precht",
+			"picture": "https://static1.squarespace.com/static/5b7b64d52714e503eebf914c/5b7b9c20c2241bc4b4ca43d6/5b7b9c2f8a922d103f80fecd/1542558423051/pascal-precht.jpg?format=750w",
+			"talk": "Building Decentralized Apps with Angular and Embark"
+		},
+		{
+			"contact": {
+				"github": "d3lm",
+				"twitter": "elmd_",
+				"website": {
+					"title": "Thoughtram",
+					"url": "http://thoughtram.io/"
+				}
+			},
+			"description": "<p>Dominic is a graduate in computer science and is passionate about many web technologies including Angular, Firebase, and ReactiveX. He has always been enthusiastic about teaching. In fact, Dominic devoted his thesis on the topic of enterprise gamification making the process of sharing and learning within companies fun and enjoyable for everyone. At the moment he's a Trainer at thoughtram providing Angular trainings worldwide.</p>",
+			"firstName": "Dominic",
+			"name": "Elm",
+			"picture": "https://static1.squarespace.com/static/5b7b64d52714e503eebf914c/5b7b9c20c2241bc4b4ca43d6/5b7b9ef303ce64abb5f62618/1543311481635/dominic-elm.jpg?format=750w",
+			"talk": "Cypress: The future of E2E testing"
+		},
+		{
+			"contact": {
+				"github": "maximusk",
+				"twitter": "maxim_koretskyi",
+				"website": {
+					"title": "Angular in depth",
+					"url": "https://blog.angularindepth.com/"
+				}
+			},
+			"description": "<p>Max is a Google Developer Expert in Web Technologies and a Growth Hacker/Developer Evangelist at ag-Grid. He is a self-taught software engineer that learnt programming from top to bottom, from JavaScript to Assembly.</p><p>He believes in fundamental knowledge and hardcore learning, so he started “In-depth Education” program and one of the biggest Angular publications online Angular-In-Depth. The program focuses on self-education driven by curiosity and self-development guided by mentors.</p><p>He’s one of the top Angular contributors on StackOverflow and writers on all things Angular. In his spare time he works on growing “In-depth Education” community and speaks at international conferences.</p>",
+			"firstName": "Max",
+			"name": "Koretskyi",
+			"picture": "https://static1.squarespace.com/static/5b7b64d52714e503eebf914c/5b7b9c20c2241bc4b4ca43d6/5b7b9fa9575d1f429a212d63/1541643024395/max-koretskyi.jpg?format=750w",
+			"talk": "Optimize and Debug Change Detection Like a Pro"
+		},
+		{
+			"contact": {
+				"github": "ashB100",
+				"twitter": "ashnita01"
+			},
+			"description": "<p>Ashnita is a web developer who loves Angular. She works for a startup company in UK.</p><p>She likes to take part in community activities to support people trying to build a career in IT, is a mentor for freeCodeCamp-Reading, co-organiser at GDG Reading and a new-bee speaker.</p><p>She enjoys travelling, nature walks and meeting people.</p>",
+			"firstName": "Ashnita",
+			"name": "Bali",
+			"picture": "https://static1.squarespace.com/static/5b7b64d52714e503eebf914c/5b7b9c20c2241bc4b4ca43d6/5bf1933970a6ad8a5c877313/1543846822702/ashnita-bali.jpg?format=750w",
+			"talk": "Up-close with Structural Directives"
+		}
+	]
+}

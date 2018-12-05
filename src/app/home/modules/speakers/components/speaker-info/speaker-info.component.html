@@ -1,0 +1,30 @@
+<div class="speaker-info">
+	<div
+		class="speaker-info__header"
+		[style.backgroundImage]="'url(' + speaker.picture + ')'">
+	</div>
+
+	<div
+		class="speaker-info__social"
+		*ngIf="speaker.contact">
+
+		<speaker-social-row
+			[social]="speaker.contact"
+			(select)="url.emit($event)">
+		</speaker-social-row>
+	</div>
+
+	<h4>Talk title</h4>
+
+	<div
+		class="speaker-info__talk-title">
+		{{ speaker.talk }}
+	</div>
+
+	<h4>About {{ speaker.firstName }}</h4>
+
+	<div
+		class="speaker-info__description"
+		[innerHTML]="speaker.description">
+	</div>
+</div>
