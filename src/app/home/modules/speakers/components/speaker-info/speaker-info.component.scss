@@ -1,8 +1,12 @@
 .speaker-info {
-	h4 {
+	h3 {
 		font-weight: 100;
 		margin-left: 10px;
 		margin-right: 10px;
+
+		&.padding {
+			margin-top: 50px;
+		}
 	}
 
 	&__header {

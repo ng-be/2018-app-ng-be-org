@@ -45,4 +45,10 @@ export class ScheduleService {
 		private readonly db: AngularFirestore,
 		private readonly storage: StorageService
 	) {}
+
+	itemById(id: string) {
+		return this.schedule$.pipe(
+			map(items => items.find(item => item.id === id))
+		);
+	}
 }

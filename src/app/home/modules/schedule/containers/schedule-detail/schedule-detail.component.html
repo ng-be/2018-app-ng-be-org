@@ -1,5 +1,16 @@
 <ion-header>
 	<ion-toolbar>
-		<ion-title>Schedule</ion-title>
+		<ion-buttons slot="start">
+			<ion-back-button defaultHref="home/(schedule:schedule)"></ion-back-button>
+		</ion-buttons>
+
+		<ion-title>{{ title$ | async }}</ion-title>
 	</ion-toolbar>
 </ion-header>
+
+<ion-content>
+	<schedule-item-detail
+		[item]="item$ | async"
+		(speaker)="onSpeakerSelected($event)">
+	</schedule-item-detail>
+</ion-content>

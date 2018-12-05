@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import {map, switchMap} from 'rxjs/operators';
+import {map, switchMap, tap} from 'rxjs/operators';
 
 import {SpeakersService} from '../../services/speakers.service';
 import {BrowserService} from '@ngbe/services';
@@ -21,6 +21,11 @@ export class SpeakerDetailComponent {
 
 	title$ = this.speaker$.pipe(
 		map(speaker => `${speaker.firstName} ${speaker.name}`)
+	);
+
+	backAction$ = this.route.queryParams.pipe(
+		map(params => params.goBack),
+		map(goBack => goBack || 'home/(speakers:speakers)')
 	);
 
 	constructor(

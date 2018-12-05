@@ -9,6 +9,7 @@ import {ScheduleDetailComponent} from './containers/schedule-detail/schedule-det
 
 // Components
 import {ScheduleItemComponent} from './components/schedule-item/schedule-item.component';
+import {ScheduleItemDetailComponent} from './components/schedule-item-detail/schedule-item-detail.component';
 
 import {routes} from './schedule.routing';
 
@@ -21,7 +22,8 @@ import {routes} from './schedule.routing';
 	declarations: [
 		ScheduleComponent,
 		ScheduleDetailComponent,
-		ScheduleItemComponent
+		ScheduleItemComponent,
+		ScheduleItemDetailComponent
 	]
 })
 export class ScheduleModule {}

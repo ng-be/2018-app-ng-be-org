@@ -14,6 +14,7 @@ import {ScheduleItem} from '../../entities';
 })
 export class ScheduleComponent {
 	schedule$ = this.scheduleService.schedule$;
+	loading$ = this.scheduleService.loading$;
 
 	constructor(
 		private readonly scheduleService: ScheduleService,
