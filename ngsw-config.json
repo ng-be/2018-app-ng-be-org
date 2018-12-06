@@ -8,17 +8,19 @@
         "files": [
           "/favicon.ico",
           "/index.html",
-          "/*.css",
-          "/*.js"
+          "/**/*.css",
+          "/**/*.js"
         ]
       }
-    }, {
+		},
+		{
       "name": "assets",
       "installMode": "lazy",
       "updateMode": "prefetch",
       "resources": {
         "files": [
-          "/assets/**"
+					"/assets/**",
+					"/svg/**"
         ]
       }
     }
