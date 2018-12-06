@@ -13,8 +13,10 @@ export class SpeakersService {
 	private remoteSpeakers$ = this.db.collection('speakers').snapshotChanges().pipe(
 		map(rawData => {
 			return rawData.map(rawValue => {
-				const id = rawValue.payload.doc.id;
-				const data = rawValue.payload.doc.data();
+				const id: string = rawValue.payload.doc.id;
+				const data: any = rawValue.payload.doc.data();
+
+				this.prefetch(data.picture);
 
 				return {
 					id,
@@ -45,7 +47,12 @@ export class SpeakersService {
 
 	speakerById(id: string) {
 		return this.speakers$.pipe(
-			map(speakers => speakers.find(speaker => speaker.id === id))
+			map(speakers => (speakers || []).find(speaker => speaker.id === id))
 		);
+	}
+
+	private prefetch(url: string) {
+		const img = new Image();
+		img.src = url;
 	}
 }

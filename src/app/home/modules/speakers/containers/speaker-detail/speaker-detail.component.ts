@@ -20,7 +20,7 @@ export class SpeakerDetailComponent {
 	);
 
 	title$ = this.speaker$.pipe(
-		map(speaker => `${speaker.firstName} ${speaker.name}`)
+		map(speaker => speaker && `${speaker.firstName} ${speaker.name}`)
 	);
 
 	backAction$ = this.route.queryParams.pipe(

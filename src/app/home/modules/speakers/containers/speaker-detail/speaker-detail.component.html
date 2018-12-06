@@ -9,8 +9,12 @@
 </ion-header>
 
 <ion-content>
-	<speaker-info
-		[speaker]="speaker$ | async"
-		(url)="openUrl($event)">
-	</speaker-info>
+	<ion-spinner *ngIf="!(speaker$ | async); else info"></ion-spinner>
+
+	<ng-template #info>
+		<speaker-info
+			[speaker]="speaker$ | async"
+			(url)="openUrl($event)">
+		</speaker-info>
+	</ng-template>
 </ion-content>
