@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {AngularFirestore} from '@angular/fire/firestore';
 import {merge} from 'rxjs';
-import {map, switchMap, publishReplay, refCount, distinctUntilChanged} from 'rxjs/operators';
+import {map, switchMap, publishReplay, refCount, distinctUntilChanged, filter} from 'rxjs/operators';
 
 import {StorageService} from '@ngbe/services';
 import {Speaker} from '../entities';
@@ -11,6 +11,7 @@ import {Speaker} from '../entities';
 })
 export class SpeakersService {
 	private remoteSpeakers$ = this.db.collection('speakers').snapshotChanges().pipe(
+		filter(rawData => rawData.length > 0),
 		map(rawData => {
 			return rawData
 				.map(rawValue => {

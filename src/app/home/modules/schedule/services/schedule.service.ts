@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {AngularFirestore} from '@angular/fire/firestore';
 import {merge} from 'rxjs';
-import {map, switchMap, publishReplay, refCount, distinctUntilChanged} from 'rxjs/operators';
+import {map, switchMap, publishReplay, refCount, distinctUntilChanged, filter} from 'rxjs/operators';
 
 import {StorageService} from '@ngbe/services';
 
@@ -12,6 +12,7 @@ import {ScheduleItem} from '../entities';
 })
 export class ScheduleService {
 	private remoteSchedule$ = this.db.collection('schedule').snapshotChanges().pipe(
+		filter(rawData => rawData.length > 0),
 		map(rawData => {
 			return rawData
 				.map(rawValue => {
