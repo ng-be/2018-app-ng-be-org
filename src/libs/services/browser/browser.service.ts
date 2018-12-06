@@ -10,6 +10,6 @@ export class BrowserService {
 	 * @param url - URL to open.
 	 */
 	open(url: string) {
-		window.open(url, '__system');
+		window.open(url, '_blank');
 	}
 }

@@ -7,15 +7,15 @@ import {Component, ChangeDetectionStrategy, Input, Output, EventEmitter} from '@
 })
 export class SpeakerSocialRowComponent {
 	@Input() social: any;
-	@Output() select = new EventEmitter<string>();
+	@Output() url = new EventEmitter<string>();
 
 	onContact(type: 'twitter' | 'github' | 'website', event: Event) {
 		if (type === 'twitter') {
-			this.select.emit(`https://twitter.com/${this.social.twitter}`);
+			this.url.emit(`https://twitter.com/${this.social.twitter}`);
 		} else if (type === 'github') {
-			this.select.emit(`https://github.com/${this.social.github}`);
+			this.url.emit(`https://github.com/${this.social.github}`);
 		} else if (type === 'website') {
-			this.select.emit(this.social.website);
+			this.url.emit(this.social.website);
 		}
 
 		event.stopPropagation();
