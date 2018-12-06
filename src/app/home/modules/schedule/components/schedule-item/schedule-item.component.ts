@@ -12,6 +12,13 @@ export class ScheduleItemComponent {
 	@Input() item: ScheduleItem;
 	@Output() detail = new EventEmitter<ScheduleItem>();
 
+	get faded() {
+		const now = new Date();
+		const endDate = new Date(this.item.endDate);
+
+		return now.getTime() > endDate.getTime();
+	}
+
 	onSelect() {
 		this.detail.emit(this.item);
 	}
