@@ -12,17 +12,19 @@ import {Speaker} from '../entities';
 export class SpeakersService {
 	private remoteSpeakers$ = this.db.collection('speakers').snapshotChanges().pipe(
 		map(rawData => {
-			return rawData.map(rawValue => {
-				const id: string = rawValue.payload.doc.id;
-				const data: any = rawValue.payload.doc.data();
+			return rawData
+				.map(rawValue => {
+					const id: string = rawValue.payload.doc.id;
+					const data: any = rawValue.payload.doc.data();
 
-				this.prefetch(data.picture);
+					this.prefetch(data.picture);
 
-				return {
-					id,
-					...data
-				} as Speaker;
-			});
+					return {
+						id,
+						...data
+					} as Speaker;
+				})
+				.sort((a, b) => `${a.firstName} ${a.name}`.localeCompare(`${b.firstName} ${b.name}`));
 		}),
 		switchMap(speakers => this.storage.set('speakers', speakers))
 	);
