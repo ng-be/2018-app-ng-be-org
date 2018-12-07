@@ -3,6 +3,7 @@ import {Router} from '@angular/router';
 
 import {ScheduleService} from '../../services/schedule.service';
 import {ScheduleItem} from '../../entities';
+import {BrowserService} from '@ngbe/services';
 
 @Component({
 	selector: 'schedule',
@@ -17,9 +18,14 @@ export class ScheduleComponent {
 	loading$ = this.scheduleService.loading$;
 
 	constructor(
+		private readonly browserService: BrowserService,
 		private readonly scheduleService: ScheduleService,
 		private readonly router: Router
 	) { }
+
+	openSlides() {
+		this.browserService.open('https://ng-be.dmlg.be');
+	}
 
 	showDetail(item: ScheduleItem) {
 		this.router.navigateByUrl(`/home/(schedule:schedule/${item.id})`);
