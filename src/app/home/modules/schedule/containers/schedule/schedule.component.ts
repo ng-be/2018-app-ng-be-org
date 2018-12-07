@@ -24,7 +24,7 @@ export class ScheduleComponent {
 	) { }
 
 	openSlides() {
-		this.browserService.open('https://n2w.medialooks.com:8080/o4iGXiYfgihMMEfr/y_Frp0eSte0yKVv5DWPb/');
+		this.browserService.open('https://n2w.medialooks.com:8080/o4iGXiYfgihMMEfr/A_aPK4sbrRy3AHuGDanm');
 	}
 
 	showDetail(item: ScheduleItem) {
